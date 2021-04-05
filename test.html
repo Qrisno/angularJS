@@ -43,7 +43,28 @@
                 </td>
             </tr>
         </table>
-
+        <table>
+            <thead>
+               <th>Name</th>
+               <th>Age</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="dog in dogs">
+                    <td>{{dog.name}}</td>
+                    <td>{{dog.age}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li ng-repeat="dog in dogsChildren">
+                {{dog.name}} index = {{$index}}
+                <ul>
+                    <li ng-repeat="child in dog.children">
+                        {{child}} index = {{$index}} parentIndex = {{$parent.$index}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
