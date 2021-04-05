@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app = 'myModule' lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+</head>
+<body>
+    <div >
+        10 + 20 = {{   ['Nino', 'Cat'][0] }}
+    </div>
+    <div ng-controller="myController">
+        40 + 50 = {{ 40 + 50 }}
+        <br>
+        სახელი: {{employee.name}}
+        <br>
+        გვარი: {{employee.surname}}
+        <br>
+        ტექსტი: {{message}}
+        <br>
+        <img ng-src = '{{employee.img}}' width="300px" height="150px">
+        <table>
+            <tr>
+                <td>სახელი </td>
+                <td>
+                    <input type="text" ng-model="employee.name" >
+                </td>
+            </tr>
+            <tr>
+                <td>გვარი </td>
+                <td>
+                    <input type="text" ng-model="employee.surname">
+                </td>
+            </tr>
+            <tr>
+                <td>ტექსტი </td>
+                <td>
+                    <textarea ng-model="message"></textarea>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>
