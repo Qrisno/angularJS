@@ -1,6 +1,13 @@
 let myModule = angular
-    .module('myModule', [])
-    .controller('myController', function($scope) {
+    .module('myModule', ['ngRoute'])
+    .config(function ($routeProvider) {
+        $routeProvider
+            .when('/employee', {
+                templateUrl:`about.html`
+            })
+        //cannot load this file due to being on my pc and not on the server
+    })
+    .controller('myController', function($scope, docWrite, firstService) {
         let employee = {
             name: 'ნინო',
             surname: 'ქრისტესიაშვილი',
@@ -41,5 +48,10 @@ let myModule = angular
         $scope.employee = employee;
         $scope.dogs = dogs;
         $scope.dogsChildren = dogsChildren;
+        docWrite.docWrite($scope.message);
+        firstService.alertMsg($scope.employee.name);
     });
+
+
+
 

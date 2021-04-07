@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app = 'myModule' lang="en">
+<html  lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,9 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/factory.js"></script>
+    <script src="scripts/service.js"></script>
+
 </head>
-<body>
+<body ng-app = 'myModule'>
+<a href="#!employee">About me</a>
+<ng-view></ng-view>
     <div >
         10 + 20 = {{   ['Nino', 'Cat'][0] }}
     </div>
@@ -65,6 +71,8 @@
                 </ul>
             </li>
         </ul>
+
     </div>
+
 </body>
 </html>
